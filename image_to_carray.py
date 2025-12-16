@@ -15,8 +15,8 @@ class ImageConverterApp(ctk.CTk):
         
         # Window setup
         self.title("Image → RGB565 C-Array")
-        self.geometry("700x600")
-        self.minsize(600, 500)
+        self.geometry("700x750")
+        self.minsize(600, 700)
         
         # Theme
         ctk.set_appearance_mode("dark")
