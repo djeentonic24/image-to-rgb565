@@ -19,11 +19,11 @@ Get the latest release from the [Releases](../../releases) page — no Python in
 
 ## Usage
 
-1. Run `ImageToCArray.exe`
+1. Run `image_to_carray.py` or `ImageToCArray.exe` (see **Build EXE**)
 2. Click to select an image
-3. Configure options (array name, bytes per line, etc.)
+3. Configure options
 4. Click "Convert & Save"
-5. Include the generated `.h` file in your embedded project
+5. Include the generated `.txt` file in your embedded project
 
 ## Output Code Example
 
