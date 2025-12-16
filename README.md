@@ -2,6 +2,9 @@
 
 **Convert images to RGB565 C-arrays for embedded LCD/TFT displays**
 
+> [!TIP]
+> **Just include the generated .txt file into your embedded C project — and you're done!**
+
 > One-click image converter for ST7789 SPI displays (and other displays in future). Testet with LVGL on STM32.
 > Tested on an ST7789 SPI, 240х240 display.
 
