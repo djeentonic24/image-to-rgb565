@@ -8,6 +8,41 @@
 > One-click image converter for ST7789 SPI displays (and other displays in future). Testet with LVGL on STM32.
 > Tested on an ST7789 SPI, 240х240 display.
 
+## Installation
+
+### 🟢 Easy Way (Windows)
+
+1. Go to [Releases](../../releases)
+2. Download `ImageToCArray.exe`
+3. Run it — done!
+
+> No installation, no Python, no dependencies. Just download and use.
+
+---
+
+### 🔧 From Source (Windows / macOS / Linux)
+
+```bash
+# Clone the repo
+git clone https://github.com/djeentonic24/image-to-rgb565.git
+cd image-to-rgb565
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run
+python image_to_carray.py
+```
+
+#### Build your own EXE (Windows)
+
+```bash
+pip install pyinstaller
+pyinstaller --onefile --windowed --name "ImageToCArray" image_to_carray.py
+```
+
+The executable will be in the `dist/` folder.
+
 ## Features
 
 - 🖼️ Convert any image (PNG, JPG, BMP, GIF) to RGB565 format
@@ -16,13 +51,9 @@
 - 🎨 Invert colors option
 - 💾 Export as .txt file
 
-## Download
-
-Get the latest release from the [Releases](../../releases) page — no Python installation required!
-
 ## Usage
 
-1. Run `image_to_carray.py` or `ImageToCArray.exe` (see **Build EXE**)
+1. Run `image_to_carray.py` or `ImageToCArray.exe` 
 2. Click to select an image
 3. Configure options
 4. Click "Convert & Save"
@@ -55,7 +86,9 @@ picture_from_txt.header.cf = LV_IMG_CF_TRUE_COLOR;  // RGB565
 picture_from_txt.data_size = expected_size;  // 
 picture_from_txt.data = (const uint8_t*)picture_data;  // from .txt file
 ```
+
 Example: full-screen top layer using LVGL
+
 ```c
 LV_IMG_DECLARE(picture_from_txt);
 /*
@@ -69,36 +102,11 @@ lv_obj_align(img, LV_ALIGN_CENTER, 0, 0);
 lv_obj_move_foreground(img);
 ```
 
-
 ## Result Example
 
 <img width="400" alt="App Screenshot" src="https://github.com/user-attachments/assets/1c803f46-7088-49f7-a5d9-f5b77ad07c69" />
 
 <img width="500" alt="Display Result" src="https://github.com/user-attachments/assets/8f75fc52-88f3-460c-b0ae-eb71c9fb8fbb" />
-
-
-
-## Build from Source
-
-### Requirements
-
-- Python 3.8+
-- Dependencies: `pip install -r requirements.txt`
-
-### Run
-
-```bash
-python image_to_carray.py
-```
-
-### Build EXE
-
-```bash
-pip install pyinstaller
-pyinstaller --onefile --windowed --name "ImageToCArray" image_to_carray.py
-```
-
-The executable will be in the `dist/` folder.
 
 ## RGB565 Format
 
@@ -114,3 +122,4 @@ MIT License — see [LICENSE](LICENSE) file.
 ## TODO
 - Other resolutions
 - Auto-settings for choosen screen
+
