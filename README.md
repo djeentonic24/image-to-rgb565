@@ -22,7 +22,7 @@ Get the latest release from the [Releases](../../releases) page — no Python in
 4. Click "Convert & Save"
 5. Include the generated `.h` file in your embedded project
 
-## Output Example
+## Output Code Example
 
 ```c
 // RGB565 format, 240x240px, byte-swapped
@@ -33,6 +33,12 @@ const uint8_t picture_data[] = {
 // Image size: 240x240 pixels
 // Data size: 115200 bytes
 ```
+##Result Example
+
+<img width="870" height="1091" alt="изображение" src="https://github.com/user-attachments/assets/1c803f46-7088-49f7-a5d9-f5b77ad07c69" />
+<img width="1280" height="964" alt="изображение" src="https://github.com/user-attachments/assets/8f75fc52-88f3-460c-b0ae-eb71c9fb8fbb" />
+
+
 
 ## Build from Source
 
