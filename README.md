@@ -1,6 +1,9 @@
 # Image to RGB565 C-Array Converter
 
-A simple GUI tool to convert images to RGB565 format C arrays for embedded displays (LCD, TFT, etc.).
+**Convert images to RGB565 C-arrays for embedded LCD/TFT displays**
+
+> One-click image converter for ST7789 SPI displays (and other displays in future). Testet with LVGL on STM32.
+> Tested on an ST7789 SPI, 240х240 display.
 
 ## Features
 
@@ -25,7 +28,7 @@ Get the latest release from the [Releases](../../releases) page — no Python in
 ## Output Code Example
 
 ```c
-// RGB565 format, 240x240px, byte-swapped
+// RGB565 format, 240x240px
 const uint8_t picture_data[] = {
     248, 31, 248, 31, 0, 0, 7, 224, ...
 };
@@ -33,7 +36,36 @@ const uint8_t picture_data[] = {
 // Image size: 240x240 pixels
 // Data size: 115200 bytes
 ```
-##Result Example
+
+Example using in a project with LVGL for a 240x240 screen:
+
+```c
+#include "starry_night.txt"  // GENERATED FILE. Has picture_data inside (see lines above)
+
+lv_img_dsc_t picture_from_txt; //lv_img_dsc_t comes from lv_img_buf.h from a standard LVGL library
+
+uint32_t expected_size = 240 * 240 * 2;
+picture_from_txt.header.always_zero = 0;
+picture_from_txt.header.w = 240;
+picture_from_txt.header.h = 240;
+picture_from_txt.header.cf = LV_IMG_CF_TRUE_COLOR;  // RGB565 
+picture_from_txt.data_size = expected_size;  // 
+picture_from_txt.data = (const uint8_t*)picture_data;  // from .txt file
+```
+Example: full-screen top layer using LVGL
+```c
+LV_IMG_DECLARE(picture_from_txt);
+/*
+...
+*/
+lv_obj_t * top_layer = lv_disp_get_layer_top(NULL);
+lv_obj_t * img = lv_img_create(top_layer);
+lv_img_set_src(img, &picture_from_txt);
+lv_obj_set_size(img, 240, 240);
+lv_obj_align(img, LV_ALIGN_CENTER, 0, 0);
+lv_obj_move_foreground(img);
+```
+
 
 ## Result Example
 
@@ -76,3 +108,6 @@ RGB565 is a 16-bit color format commonly used in embedded displays:
 
 MIT License — see [LICENSE](LICENSE) file.
 
+## TODO
+- Other resolutions
+- Auto-settings for choosen screen
