@@ -8,7 +8,7 @@ A simple GUI tool to convert images to RGB565 format C arrays for embedded displ
 - 📐 Auto-resize to 240x240 pixels
 - 🔄 Byte swap (Big Endian / Little Endian)
 - 🎨 Invert colors option
-- 💾 Export as C header file (.h) or text file
+- 💾 Export as .txt file
 
 ## Download
 
