@@ -35,8 +35,11 @@ const uint8_t picture_data[] = {
 ```
 ##Result Example
 
-<img width="870" height="1091" alt="изображение" src="https://github.com/user-attachments/assets/1c803f46-7088-49f7-a5d9-f5b77ad07c69" />
-<img width="1280" height="964" alt="изображение" src="https://github.com/user-attachments/assets/8f75fc52-88f3-460c-b0ae-eb71c9fb8fbb" />
+## Result Example
+
+<img width="400" alt="App Screenshot" src="https://github.com/user-attachments/assets/1c803f46-7088-49f7-a5d9-f5b77ad07c69" />
+
+<img width="500" alt="Display Result" src="https://github.com/user-attachments/assets/8f75fc52-88f3-460c-b0ae-eb71c9fb8fbb" />
 
 
 
