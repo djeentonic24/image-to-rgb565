@@ -15,8 +15,8 @@ class ImageConverterApp(ctk.CTk):
         
         # Window setup
         self.title("Image → RGB565 C-Array")
-        self.geometry("700x750")
-        self.minsize(600, 700)
+        self.geometry("700x850")
+        self.minsize(600, 800)
         
         # Theme
         ctk.set_appearance_mode("dark")
@@ -52,7 +52,7 @@ class ImageConverterApp(ctk.CTk):
         # Drop zone / Preview area
         self.preview_frame = ctk.CTkFrame(
             self.main_frame,
-            height=250,
+            height=200,
             corner_radius=15,
             border_width=2,
             border_color="#3b82f6"
