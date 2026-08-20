@@ -16,8 +16,6 @@
 2. Download `ImageToCArray.exe`
 3. Run it — done!
 
-> No installation, no Python, no dependencies. Just download and use.
-
 ---
 
 ### 🔧 From Source (Windows / macOS / Linux)
@@ -45,11 +43,11 @@ The executable will be in the `dist/` folder.
 
 ## Features
 
-- 🖼️ Convert any image (PNG, JPG, BMP, GIF) to RGB565 format
-- 📐 Auto-resize to 240x240 pixels
-- 🔄 Byte swap (Big Endian / Little Endian)
-- 🎨 Invert colors option
-- 💾 Export as .txt file
+- Convert any image (PNG, JPG, BMP, GIF) to RGB565 format
+- Auto-resize to 240x240 pixels
+- Byte swap (Big Endian / Little Endian)
+- Invert colors option
+- Export as .txt file
 
 ## Usage
 
